@@ -22,6 +22,7 @@ Acceptance Criteria
     * Contract identifier
     * Payment date
     * Payment amount
+
 Optional: 
 * Provide an authenticated admin view that allows me to view all contracts
 * Document the API
