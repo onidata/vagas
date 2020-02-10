@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+    environment:
+        POSTGRES_DB: "onidatasys"
+        POSTGRES_USER: "onidata"
+        POSTGRES_PASSWORD: "mzrFr6DM8vxEnI€9SXcDfs"
+        TZ: 'GMT'
+    volumes:
+      - ./database/:/var/lib/postgresql/data:rw
+    networks:
+        alehv_net:
+            ipv4_address: 10.11.0.3
+  web:
+    build: ./web
+    command: python3 vagas/manage.py runserver 0.0.0.0:8080
+    volumes:
+      - ./onidataProject/:/onidataProject:rw
+    ports:
+     - "8080:8080"
+    depends_on:
+      - db
+    networks:
+        alehv_net:
+            ipv4_address: 10.11.0.2
+
+networks:
+    alehv_net:
+        ipam:
+            driver: default
+            config:
+              - subnet: 10.11.0.0/24
