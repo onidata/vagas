@@ -2,12 +2,13 @@
 
 Using Django, create a simple API that allows users to manage their loans contracts.
 
-Acceptance Criteria
+## Acceptance Criteria
 * Users are able to submit contracts and payments to the API
 * Users are able to retrieve contracts and payments that they submitted
 * Users are able to retrieve the amount due for each contract they have
      * Amount due is how much they still have to pay for a contract
      * You must consider the interest rate and all payments made
+     * Total interest is [prorated](https://duckduckgo.com/?q=pro+rata)
 * Users cannot see contracts/payments submitted by other users
 * Use of the API requires a unique auth token for each user
 * Submitted contracts must include, at least, the following attributes:
@@ -23,9 +24,21 @@ Acceptance Criteria
     * Payment date
     * Payment amount
 
-Optional: 
+## Optional
 * Provide an authenticated admin view that allows me to view all contracts
 * Document the API
 * Expand the financial model to include taxes/insurance and other costs
 
+## Additional info
 Organize the schema and data models in whatever manner you think makes the most sense and feel free to add any additional style and flair to the project that you'd like.
+
+### Amount due
+The amount due is **NOT** simply the multiplication of what is left to pay with the interest rate. The right way of calculating involves using [compound interest](https://duckduckgo.com/?q=compund+interest).
+
+* The total interest is proportional to the amount of days the user took to pay the contract in full.
+* Interest should be calculated only on the amount due (if an user borrowed $500 and paid back $300 the interest for the next payments should be calculated only on the $200 left).
+* The amount due changes everyday because the total interest is prorated.
+
+If you are not familiar with financial math this task may sound daunting at first. Don't get discouraged. You don't need to be a financial specialist to make those calculations. With proper reading and understanding of some basic concepts like compound interest and prorating, coding it should be a breeze. If the code looks complicated, you're probably going in the worng direction.
+
+If you are still struggling, remember that this is not a hard requirement. You can calculate the amount due the way it makes sense to you and we will grade your test regardless :)
