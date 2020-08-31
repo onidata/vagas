@@ -5,8 +5,9 @@ Usando Django/DRF desenvolva uma API que permita usuários gerenciar empréstimo
 ## Crtérios de aceite
 * Usuários devem ser capazes de inserir empréstimos e seus respectivos pagamentos
 * Usuários devem ser capazer de visualizar seus empréstimos e pagamentos
-* Usuários devem ser capazes de visualizar o saldo devedor de cada um dos seus empréstimos
+* Usuários devem ser capazes de visualizar o [saldo devedor](https://duckduckgo.com/?q=saldo+devedor) de cada um dos seus empréstimos
     * Você pode decidir onde e como mostrar a informação
+    * O saldo devedor nada mais é do que o quanto o cliente ainda deve para o banco
     * O saldo devedor deve considerar a taxa de juros do empréstimo e descontar o que já foi pago
 * Usuários não podem ver ou editar empréstimos ou pagamentos de outros usuários
 * A autenticação da API deve ser feita via token
@@ -24,20 +25,21 @@ Usando Django/DRF desenvolva uma API que permita usuários gerenciar empréstimo
     * Valor do pagamento
 * Testes
     * As funcionalidade principais devem estar com testes escritos
-    * Você pode decidir quais testes agregam mais valor ao projeto
+    * Você pode decidir quais os testes que mais agregam valor ao projeto
 
 ## Extra (opcional)
 * Cálculo do saldo devedor usando [juros compostos](https://duckduckgo.com/?q=juros+compostos) [pro rata dia](https://duckduckgo.com/?q=pro+rata+dia).
-* Expandir o modelo financeiro adicionando [IOF](https://duckduckgo.com/?q=imposto+sobre+operações+financeiras), seguro, etc...
+* Expandir o modelo financeiro adicionando [IOF](https://duckduckgo.com/?q=imposto+sobre+operações+financeiras+operação+de+crédito), seguro, etc...
 
 ## Informações adicionais
 Você pode organizar a API e o banco de dados da maneira que achar que faz mais sentido. Além disso, sinta-se a vontade para adicionar ferramentas ou funcionalidades que ache relevante.
 
 ## O que vamos avaliar
-1. O cumprimento de todos os requisitos obrigatórios
+1. O cumprimento dos requisitos obrigatórios
 2. A forma que o código está organizado
-3. A abordagem para testes das APIs
-4. A simplicidade da solução
-5. Aderência a [PEP 8](https://duckduckgo.com/?q=pep8)
-6. A implementação de requisitos opcionais
-7. A implementação de funcionalidades extras
+3. O domínio das funcionalidade do Django e DRF
+4. A abordagem e abrangência dos testes do código
+5. A simplicidade da solução
+6. Aderência a [PEP 8](https://duckduckgo.com/?q=pep8)
+7. A implementação de requisitos opcionais
+8. A implementação de funcionalidades extras
