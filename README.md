@@ -11,6 +11,7 @@ Usando Django/DRF desenvolva uma API que permita usuários gerenciar empréstimo
     * O saldo devedor deve considerar a taxa de juros do empréstimo e descontar o que já foi pago
 * Usuários não podem ver ou editar empréstimos ou pagamentos de outros usuários
 * A autenticação da API deve ser feita via token
+    * Não é necessário desenvolver endpoints para criação/gerenciamento de usuários
 * Os empréstimos devem conter no mínimo as informações abaixo:
     * Identificador - um identificador aleatório gerado automaticamente
     * Valor nominal - o valor emprestado pelo banco
