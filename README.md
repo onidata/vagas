@@ -1,6 +1,6 @@
 # Desafio
 
-Usando Django/DRF desenvolva uma API que permita usuários gerenciar empréstimos.
+Usando [Django](https://www.djangoproject.com/) e [Django REST framework](https://www.django-rest-framework.org/) desenvolva uma API REST que permita usuários gerenciar empréstimos.
 
 ## Crtérios de aceite
 * Usuários devem ser capazes de inserir empréstimos e seus respectivos pagamentos
@@ -25,7 +25,7 @@ Usando Django/DRF desenvolva uma API que permita usuários gerenciar empréstimo
     * Data do pagamento
     * Valor do pagamento
 * Testes
-    * As funcionalidade principais devem estar com testes escritos
+    * As funcionalidade principais devem estar com [testes](https://docs.djangoproject.com/en/3.1/topics/testing/) escritos
     * Você pode decidir quais os testes que mais agregam valor ao projeto
 
 ## Extra (opcional)
