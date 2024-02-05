@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "onidataapi"
+version = "0.1.0"
+description = ""
+authors = ["alfmorais <alfredneto@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+djangorestframework = "^3.14.0"
+markdown = "^3.5.2"
+django-filter = "^23.5"
+
+
+[tool.poetry.group.test.dependencies]
+ipdb = "^0.13.13"
+pre-commit = "^3.6.0"
+pytest = "^8.0.0"
+
+[tool.pytest.ini_options]
+pythonpath = ". src"
+DJANGO_SETTINGS_MODULE = "tests.settings"
+python_files = ["test_*.py", "*_test.py", "testing/python/*.py"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
